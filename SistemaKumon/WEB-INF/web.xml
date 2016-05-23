@@ -1,0 +1,966 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0"
+  metadata-complete="true">  
+
+<context-param> 
+	<description>
+		Usuario base de datos
+	</description> 
+	<param-name>
+		usuario
+	</param-name> 
+	<param-value>
+		kumonUser
+	</param-value> 
+</context-param>
+
+<context-param> 
+	<description>
+		Password base de datos
+	</description> 
+	<param-name>
+		pass
+	</param-name> 
+	<param-value>
+		mypass
+	</param-value> 
+</context-param>
+
+<servlet>
+	<servlet-name>
+		RegistroAlumno	 
+	</servlet-name>
+
+	<servlet-class>
+		 RegistroAlumno
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		RegistroAlumno
+	</servlet-name>
+
+	<url-pattern>
+		/registroAl
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		RegistroTutor	 
+	</servlet-name>
+
+	<servlet-class>
+		 RegistroTutor
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		RegistroTutor
+	</servlet-name>
+
+	<url-pattern>
+		/registroTut
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		RegistroAyudante	 
+	</servlet-name>
+
+	<servlet-class>
+		 RegistroAyudante
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		RegistroAyudante
+	</servlet-name>
+
+	<url-pattern>
+		/registroAyu
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		RegistroPago	 
+	</servlet-name>
+
+	<servlet-class>
+		 RegistroPago
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		RegistroPago
+	</servlet-name>
+
+	<url-pattern>
+		/registroPag
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		RegistroSesion	 
+	</servlet-name>
+
+	<servlet-class>
+		 RegistroSesion
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		RegistroSesion
+	</servlet-name>
+
+	<url-pattern>
+		/registroSes
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		RegistroMaterial	 
+	</servlet-name>
+
+	<servlet-class>
+		 RegistroMaterial
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		RegistroMaterial
+	</servlet-name>
+
+	<url-pattern>
+		/registroMat
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		RegistroUsuario	 
+	</servlet-name>
+
+	<servlet-class>
+		 RegistroUsuario
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		RegistroUsuario
+	</servlet-name>
+
+	<url-pattern>
+		/registroUsu
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		Ingreso	 
+	</servlet-name>
+
+	<servlet-class>
+		Ingreso
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		Ingreso
+	</servlet-name>
+
+	<url-pattern>
+		/ingreso
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		BuscaAl	 
+	</servlet-name>
+
+	<servlet-class>
+		BuscaAlumno
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		BuscaAl
+	</servlet-name>
+
+	<url-pattern>
+		/buscaAl
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		BuscaAy	 
+	</servlet-name>
+
+	<servlet-class>
+		BuscaAyudante
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		BuscaAy
+	</servlet-name>
+
+	<url-pattern>
+		/buscaAy
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		BuscaMat 
+	</servlet-name>
+
+	<servlet-class>
+		BuscaMaterial
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		BuscaMat
+	</servlet-name>
+
+	<url-pattern>
+		/buscaMat
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		BuscaSes
+	</servlet-name>
+
+	<servlet-class>
+		BuscaSesion
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		BuscaSes
+	</servlet-name>
+
+	<url-pattern>
+		/buscaSes
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		BuscaPag
+	</servlet-name>
+
+	<servlet-class>
+		BuscaPago
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		BuscaPag
+	</servlet-name>
+
+	<url-pattern>
+		/buscaPag
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		BuscaUsu
+	</servlet-name>
+
+	<servlet-class>
+		BuscaUsuario
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		BuscaUsu
+	</servlet-name>
+
+	<url-pattern>
+		/buscaUsu
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		BuscaTut
+	</servlet-name>
+
+	<servlet-class>
+		BuscaTutor
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		BuscaTut
+	</servlet-name>
+
+	<url-pattern>
+		/buscaTut
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		Seleccion	 
+	</servlet-name>
+
+	<servlet-class>
+		SeleccionAccion
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		Seleccion
+	</servlet-name>
+
+	<url-pattern>
+		/query
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		SeleccionAy	 
+	</servlet-name>
+
+	<servlet-class>
+		SeleccionAccionAy
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		SeleccionAy
+	</servlet-name>
+
+	<url-pattern>
+		/queryAy
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		SeleccionMat 
+	</servlet-name>
+
+	<servlet-class>
+		SeleccionAccionMat
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		SeleccionMat
+	</servlet-name>
+
+	<url-pattern>
+		/queryMat
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		SeleccionSes 
+	</servlet-name>
+
+	<servlet-class>
+		SeleccionAccionSes
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		SeleccionSes
+	</servlet-name>
+
+	<url-pattern>
+		/querySes
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		SeleccionPag
+	</servlet-name>
+
+	<servlet-class>
+		SeleccionAccionPag
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		SeleccionPag
+	</servlet-name>
+
+	<url-pattern>
+		/queryPag
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		SeleccionUsu
+	</servlet-name>
+
+	<servlet-class>
+		SeleccionAccionUsu
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		SeleccionUsu
+	</servlet-name>
+
+	<url-pattern>
+		/queryUsu
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		SeleccionTut
+	</servlet-name>
+
+	<servlet-class>
+		SeleccionAccionTut
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		SeleccionTut
+	</servlet-name>
+
+	<url-pattern>
+		/queryTut
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		CambioAl	 
+	</servlet-name>
+
+	<servlet-class>
+		CambiarAlumno
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		CambioAl
+	</servlet-name>
+
+	<url-pattern>
+		/cambiarAl
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		CambioAy 
+	</servlet-name>
+
+	<servlet-class>
+		CambiarAyudante
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		CambioAy
+	</servlet-name>
+
+	<url-pattern>
+		/cambiarAyu
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		CambioMat
+	</servlet-name>
+
+	<servlet-class>
+		CambiarMaterial
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		CambioMat
+	</servlet-name>
+
+	<url-pattern>
+		/cambiarMat
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		CambioSes
+	</servlet-name>
+
+	<servlet-class>
+		CambiarSesion
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		CambioSes
+	</servlet-name>
+
+	<url-pattern>
+		/cambiarSes
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		CambioPag
+	</servlet-name>
+
+	<servlet-class>
+		CambiarPago
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		CambioPag
+	</servlet-name>
+
+	<url-pattern>
+		/cambiarPag
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		CambioUsu
+	</servlet-name>
+
+	<servlet-class>
+		CambiarUsuario
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		CambioUsu
+	</servlet-name>
+
+	<url-pattern>
+		/cambiarUsu
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		CambioTut
+	</servlet-name>
+
+	<servlet-class>
+		CambiarTutor
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		CambioTut
+	</servlet-name>
+
+	<url-pattern>
+		/cambiarTut
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		BorrarAl	 
+	</servlet-name>
+
+	<servlet-class>
+		BorrarAlumno
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		BorrarAl
+	</servlet-name>
+
+	<url-pattern>
+		/borrarAl
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		BorrarAy	 
+	</servlet-name>
+
+	<servlet-class>
+		BorrarAyudante
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		BorrarAy
+	</servlet-name>
+
+	<url-pattern>
+		/borrarAyu
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		BorrarMat	 
+	</servlet-name>
+
+	<servlet-class>
+		BorrarMaterial
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		BorrarMat
+	</servlet-name>
+
+	<url-pattern>
+		/borrarMat
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		BorrarSes	 
+	</servlet-name>
+
+	<servlet-class>
+		BorrarSesion
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		BorrarSes
+	</servlet-name>
+
+	<url-pattern>
+		/borrarSes
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		BorrarPag	 
+	</servlet-name>
+
+	<servlet-class>
+		BorrarPago
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		BorrarPag
+	</servlet-name>
+
+	<url-pattern>
+		/borrarPag
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		BorrarUsu	 
+	</servlet-name>
+
+	<servlet-class>
+		BorrarUsuario
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		BorrarUsu
+	</servlet-name>
+
+	<url-pattern>
+		/borrarUsu
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		BorrarTut	 
+	</servlet-name>
+
+	<servlet-class>
+		BorrarTutor
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		BorrarTut
+	</servlet-name>
+
+	<url-pattern>
+		/borrarTut
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		LogO
+	</servlet-name>	
+	<servlet-class>
+		Logout
+	</servlet-class>
+</servlet>	
+<servlet-mapping>
+	<servlet-name>
+		LogO
+	</servlet-name>
+	<url-pattern>
+		/LogO
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		Consulta1
+	</servlet-name>
+	<servlet-class>
+		ConsultaAlumnos1
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		Consulta1
+	</servlet-name>
+	<url-pattern>
+		/Consulta1
+	</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>
+		Consulta2
+	</servlet-name>
+	<servlet-class>
+		ConsultaAlumnos2
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		Consulta2
+	</servlet-name>
+	<url-pattern>
+		/Consulta2
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		Consulta3
+	</servlet-name>
+	<servlet-class>
+		ConsultaInasitencias1
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		Consulta3
+	</servlet-name>
+	<url-pattern>
+		/Consulta3
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		Consulta4
+	</servlet-name>
+	<servlet-class>
+		ConsultaInasitencias2
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		Consulta4
+	</servlet-name>
+	<url-pattern>
+		/Consulta4
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		Consulta5
+	</servlet-name>
+	<servlet-class>
+		ConsultaAlumnos3
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		Consulta5
+	</servlet-name>
+	<url-pattern>
+		/Consulta5
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		Consulta6
+	</servlet-name>
+	<servlet-class>
+		ConsultaAyudantes
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		Consulta6
+	</servlet-name>
+	<url-pattern>
+		/Consulta6
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		Consulta7
+	</servlet-name>
+	<servlet-class>
+		ConsultaPagos
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		Consulta7
+	</servlet-name>
+	<url-pattern>
+		/Consulta7
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		Consulta8
+	</servlet-name>
+	<servlet-class>
+		ConsultaMateriales
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		Consulta8
+	</servlet-name>
+	<url-pattern>
+		/Consulta8
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		EligeAl
+	</servlet-name>
+	<servlet-class>
+		EligeAlumno
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		EligeAl
+	</servlet-name>
+	<url-pattern>
+		/eligeAl
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		EligeMat
+	</servlet-name>
+	<servlet-class>
+		EligeMaterial
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		EligeMat
+	</servlet-name>
+	<url-pattern>
+		/eligeMat
+	</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>
+		EligeTut
+	</servlet-name>
+	<servlet-class>
+		EligeTutor
+	</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>
+		EligeTut
+	</servlet-name>
+	<url-pattern>
+		/eligeTut
+	</url-pattern>
+</servlet-mapping>
+
+</web-app>
